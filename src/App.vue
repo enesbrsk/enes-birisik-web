@@ -1,26 +1,44 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <v-app>
+    <v-app-bar app color="white" dark>
+      <NavbarMenu/>
+    </v-app-bar>
+    <v-main>
+      <HelloWorld/>
+      <AboutPage/>
+      <SkillsPage/>
+      <CertificationPage/>
+    </v-main>
+  </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import NavbarMenu from './components/NavbarMenu.vue';
+import HelloWorld from './components/HelloWorld.vue';
+import SkillsPage from './components/SkillsPage.vue';
+import AboutPage from "@/components/AboutPage.vue";
+import CertificationPage from "@/components/CertificationPage.vue"
 
 export default {
   name: 'App',
+
   components: {
-    HelloWorld
-  }
+    NavbarMenu,
+    HelloWorld,
+    SkillsPage,
+    AboutPage,
+    CertificationPage
+  },
+
+  data: () => ({
+    //
+  }),
 }
 </script>
-
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+html, body {
+  scroll-behavior: smooth;
+  height: 100%;
+  margin: 0;
 }
 </style>

@@ -3,9 +3,8 @@
     <v-container class="skill-container">
       <v-banner-text id="text" style="font-size: 3rem;font-weight: normal;text-align: center;padding-bottom: 10px;"
                      align="center">
-        SKILLS
+        Check Out My Skills
       </v-banner-text>
-
       <div class="splide">
         <div class="splide__track">
           <div class="splide__list">
@@ -136,7 +135,7 @@ export default {
 
 .skill-container {
   margin: auto;
-  padding: 100px;
+  width: 100%;
 }
 
 #skill-card:hover {

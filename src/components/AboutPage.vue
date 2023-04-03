@@ -66,24 +66,14 @@ export default {};
   font-family: Arial;
   box-shadow: 0 4px 10px 0px rgba(50, 50, 50, 0.212);
 }
-
 .about-image {
-
   width: 100%;
   height: auto;
   margin: 0 auto;
 }
-
 .about-content {
   text-align: center;
 }
-
-.about-title {
-  font-size: 36px;
-  margin-bottom: 30px;
-  font-weight: bold;
-}
-
 .about-description {
   font-size: 18px;
   line-height: 1.5;

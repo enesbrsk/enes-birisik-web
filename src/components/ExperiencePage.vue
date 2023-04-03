@@ -2,11 +2,10 @@
 
   <v-banner-text id="text" style="font-size: 3rem;font-weight: normal;text-align: center;padding-bottom: 10px;"
                  align="center">
-    EXPERIENCE
+    Experience
   </v-banner-text>
-
   <div style="margin-left:50px;margin-right: 50px">
-    <v-expansion-panels  class="mb-6">
+    <v-expansion-panels class="mb-6">
       <v-expansion-panel
           v-for="(item,index) in experienceList"
           :key="index"
@@ -17,7 +16,7 @@
               <v-img width="140" :src="item.image" aspect-ratio="1"></v-img>
             </v-col>
             <v-col cols="7">
-              <div id="text" class="text-h5 font-weight-bold" style="text-align: left;">{{ item.title }}</div>
+              <div id="text" class="text-h6 font-weight-bold" style="text-align: left;">{{ item.title }}</div>
               <v-col>
                 <h2>{{ item.company }}</h2>
               </v-col>
@@ -27,12 +26,13 @@
             </v-col>
           </v-row>
         </v-expansion-panel-title>
-
-        <v-expansion-panel-text>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</v-expansion-panel-text>
+        <v-expansion-panel-text>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+          laboris nisi ut aliquip ex ea commodo consequat.
+        </v-expansion-panel-text>
       </v-expansion-panel>
     </v-expansion-panels>
   </div>
-
 
 
 </template>
@@ -45,14 +45,14 @@ export default {
           title: 'Junior Back End Developer',
           company: '• Eureko Sigorta',
           content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-          image: require('@/assets/images/certification/coursea-desingpattern.png'),
+          image: require('@/assets/images/experience/eureko.png'),
           date: 'Jul 2022 - Aug 2022',
         },
         {
           title: 'Junior Back End Developer',
           company: '• Medya Takip Merkezi',
           content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-          image: require('@/assets/images/certification/coursea-desingpattern.png'),
+          image: require('@/assets/images/experience/medyatakip.jpg'),
           date: 'Jul 2022 - Aug 2022',
 
         },
@@ -60,14 +60,14 @@ export default {
           title: 'Intern Web Developer',
           company: '• Cybersoft',
           content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-          image: require('@/assets/images/certification/coursea-desingpattern.png'),
+          image: require('@/assets/images/experience/cybersoft.jpg'),
           date: 'Jul 2022 - Aug 2022',
         },
         {
           title: 'Junior Back End Developer',
           company: '• Medya Takip Merkezi',
           content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-          image: require('@/assets/images/certification/coursea-desingpattern.png'),
+          image: require('@/assets/images/experience/medyatakip.jpg'),
           date: 'Jul 2022 - Aug 2022',
 
         },
@@ -82,6 +82,7 @@ export default {
   font-family: Inter, sans-serif !important;
   font-weight: bold;
 }
+
 .panel-header {
   display: flex;
   align-items: center;

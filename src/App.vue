@@ -4,33 +4,21 @@
       <NavbarMenu/>
     </v-app-bar>
     <v-main>
-      <HelloWorld/>
-      <AboutPage/>
-      <SkillsPage/>
-      <ExperiencePage/>
-      <CertificationPage/>
+      <v-container style="margin-top: 20px">
+        <router-view/>
+      </v-container>
     </v-main>
   </v-app>
 </template>
 
 <script>
 import NavbarMenu from './components/NavbarMenu.vue';
-import HelloWorld from './components/HelloWorld.vue';
-import SkillsPage from './components/SkillsPage.vue';
-import AboutPage from "@/components/AboutPage.vue";
-import ExperiencePage from '@/components/ExperiencePage.vue';
-import CertificationPage from "@/components/CertificationPage.vue"
 
 export default {
   name: 'App',
 
   components: {
-    NavbarMenu,
-    HelloWorld,
-    SkillsPage,
-    AboutPage,
-    ExperiencePage,
-    CertificationPage
+    NavbarMenu
   },
 
   data: () => ({

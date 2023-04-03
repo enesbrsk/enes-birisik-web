@@ -15,14 +15,24 @@
       <v-col cols="12" md="8" class="about-content">
 
         <div>
-          <v-row align="center" >
+          <v-row align="center">
             <v-col>
               <div>
-                <h2 >Birth: <v-label>16 Dec 1998</v-label></h2>
-                <h2 >City: <v-label>Istanbul/ Turkey</v-label></h2>
-                <h2 >University: <v-label>Duzce University</v-label></h2>
-                <h2 >Department: <v-label>Computer Engineering</v-label></h2>
-                <h2 >Degree: <v-label>Bachelor</v-label></h2>
+                <h2>Birth:
+                  <v-label>16 Dec 1998</v-label>
+                </h2>
+                <h2>City:
+                  <v-label>Istanbul/ Turkey</v-label>
+                </h2>
+                <h2>University:
+                  <v-label>Duzce University</v-label>
+                </h2>
+                <h2>Department:
+                  <v-label>Computer Engineering</v-label>
+                </h2>
+                <h2>Degree:
+                  <v-label>Bachelor</v-label>
+                </h2>
               </div>
             </v-col>
           </v-row>
@@ -37,8 +47,10 @@
         </v-card-text>
         <v-btn class="me-2 text-none"
                variant="outlined"
-               prepend-icon="mdi-export-variant">Resume
+               prepend-icon="mdi-export-variant"><a href="./EnesBirisik_CV.pdf" target="_blank">Resume</a>
         </v-btn>
+
+
       </v-col>
     </v-row>
   </v-container>

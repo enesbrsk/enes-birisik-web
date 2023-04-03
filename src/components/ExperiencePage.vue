@@ -5,26 +5,25 @@
     EXPERIENCE
   </v-banner-text>
 
-
   <div style="margin-left:50px;margin-right: 50px">
     <v-expansion-panels  class="mb-6">
       <v-expansion-panel
-          v-for="i in 3"
-          :key="i"
+          v-for="(item,index) in experienceList"
+          :key="index"
       >
         <v-expansion-panel-title expand-icon="mdi-menu-down">
           <v-row align="center">
             <v-col cols="1">
-              <v-img width="140" :src="require('@/assets/images/certification/coursea-desingpattern.png')" aspect-ratio="1"></v-img>
+              <v-img width="140" :src="item.image" aspect-ratio="1"></v-img>
             </v-col>
             <v-col cols="7">
-              <div id="text" class="text-h5 font-weight-bold" style="text-align: left;">Java Developer</div>
+              <div id="text" class="text-h5 font-weight-bold" style="text-align: left;">{{ item.title }}</div>
               <v-col>
-                <h2>Eureko Sigorta</h2>
+                <h2>{{ item.company }}</h2>
               </v-col>
             </v-col>
             <v-col cols="4" class="text-right">
-              <div class="text-h10">May 2022 - Currently</div>
+              <div class="text-h10">{{ item.date }}</div>
             </v-col>
           </v-row>
         </v-expansion-panel-title>
@@ -41,32 +40,37 @@
 export default {
   data() {
     return {
-      panels: [
+      experienceList: [
         {
-          title: 'Java Developer',
-          subtitle: 'Eureko',
+          title: 'Junior Back End Developer',
+          company: '• Eureko Sigorta',
           content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
           image: require('@/assets/images/certification/coursea-desingpattern.png'),
           date: 'Jul 2022 - Aug 2022',
-          isOpen: false,
         },
         {
-          title: 'Java Developer',
-          subtitle: 'Eureko',
+          title: 'Junior Back End Developer',
+          company: '• Medya Takip Merkezi',
           content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
           image: require('@/assets/images/certification/coursea-desingpattern.png'),
           date: 'Jul 2022 - Aug 2022',
-          isOpen: false,
+
         },
         {
-          title: 'Java Developer',
-          subtitle: 'Eureko',
+          title: 'Intern Web Developer',
+          company: '• Cybersoft',
           content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
           image: require('@/assets/images/certification/coursea-desingpattern.png'),
           date: 'Jul 2022 - Aug 2022',
-          isOpen: false,
         },
-        // diğer panelleri buraya ekleyin
+        {
+          title: 'Junior Back End Developer',
+          company: '• Medya Takip Merkezi',
+          content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+          image: require('@/assets/images/certification/coursea-desingpattern.png'),
+          date: 'Jul 2022 - Aug 2022',
+
+        },
       ],
     };
   },

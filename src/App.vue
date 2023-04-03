@@ -8,6 +8,7 @@
       <AboutPage/>
       <SkillsPage/>
       <CertificationPage/>
+      <ProjectPage/>
     </v-main>
   </v-app>
 </template>
@@ -18,6 +19,7 @@ import HelloWorld from './components/HelloWorld.vue';
 import SkillsPage from './components/SkillsPage.vue';
 import AboutPage from "@/components/AboutPage.vue";
 import CertificationPage from "@/components/CertificationPage.vue"
+import ProjectPage from "@/components/ProjectPage.vue"
 
 export default {
   name: 'App',
@@ -27,7 +29,8 @@ export default {
     HelloWorld,
     SkillsPage,
     AboutPage,
-    CertificationPage
+    CertificationPage,
+    ProjectPage
   },
 
   data: () => ({

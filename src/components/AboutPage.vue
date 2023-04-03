@@ -11,9 +11,7 @@
       <v-col cols="12" md="4">
         <img :src="require('@/assets/images/7.png')" alt="Developer" class="about-image"/>
       </v-col>
-
       <v-col cols="12" md="8" class="about-content">
-
         <div>
           <v-row align="center">
             <v-col>
@@ -45,12 +43,10 @@
           me to build software with modern techniques, service-based architecture, and third-party API integration. I am
           also extremely rigorous and perfectionist in my code, exactly as a Backend Developer should be.
         </v-card-text>
-        <v-btn class="me-2 text-none"
+        <v-btn class="me-2 text-none custom-btn"
                variant="outlined"
                prepend-icon="mdi-export-variant"><a href="./EnesBirisik_CV.pdf" target="_blank">Resume</a>
         </v-btn>
-
-
       </v-col>
     </v-row>
   </v-container>
@@ -68,28 +64,26 @@ export default {};
   font-family: Arial;
   box-shadow: 0 4px 10px 0px rgba(50, 50, 50, 0.212);
 }
-
 .about-image {
-
   width: 100%;
   height: auto;
   margin: 0 auto;
 }
-
 .about-content {
   text-align: center;
 }
-
-.about-title {
-  font-size: 36px;
-  margin-bottom: 30px;
-  font-weight: bold;
-}
-
 .about-description {
   font-size: 18px;
   line-height: 1.5;
   color: #666;
   margin-top: 30px;
+}
+.custom-btn[data-v-7e99b488] {
+    border: 2px solid purple !important;
+    color: purple !important;
+}
+.custom-btn[data-v-7e99b488]:hover{
+  background-color: purple !important;
+  color: white !important;
 }
 </style>

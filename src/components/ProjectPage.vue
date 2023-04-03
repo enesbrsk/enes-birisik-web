@@ -2,10 +2,10 @@
 import { assert } from '@vue/compiler-core';
 
 <template>
-  <v-container class="skill-container" style="max-width: 75%;">
+  <v-container class="skill-container">
     <v-banner-text id="text" style="font-size: 3rem;font-weight: normal;text-align: center;padding-bottom: 10px;"
       align="center">
-      Projects
+      Check out some of my projects
     </v-banner-text>
     <div style="display: flex;
           flex-wrap: wrap;">

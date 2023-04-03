@@ -15,6 +15,9 @@ import '@splidejs/vue-splide/css/core';
 import './index.css'
 import '././assets/styles/main.css'
 
+import router from './router/index.js'
+
+
 
 
 
@@ -22,5 +25,6 @@ loadFonts()
 
 createApp(App)
     .use(vuetify)
+    .use(router)
     .use(VueSplide)
     .mount('#app')

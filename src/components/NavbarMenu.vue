@@ -36,8 +36,12 @@ export default {
   data: () => ({
     items: [
       { title: 'Home', link: '/' },
+      { title: 'About', link: '/about' },
       { title: 'Projects', link: '/projects' },
+      { title: 'Skills', link: '/skills' },
+      { title: 'Certification', link: '/certification' },
       { title: 'Contact', link: '/contact' },
+
     ],
   }),
 }

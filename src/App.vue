@@ -7,6 +7,7 @@
       <HelloWorld/>
       <AboutPage/>
       <SkillsPage/>
+      <ExperiencePage/>
       <CertificationPage/>
     </v-main>
   </v-app>
@@ -17,6 +18,7 @@ import NavbarMenu from './components/NavbarMenu.vue';
 import HelloWorld from './components/HelloWorld.vue';
 import SkillsPage from './components/SkillsPage.vue';
 import AboutPage from "@/components/AboutPage.vue";
+import ExperiencePage from '@/components/ExperiencePage.vue';
 import CertificationPage from "@/components/CertificationPage.vue"
 
 export default {
@@ -27,6 +29,7 @@ export default {
     HelloWorld,
     SkillsPage,
     AboutPage,
+    ExperiencePage,
     CertificationPage
   },
 

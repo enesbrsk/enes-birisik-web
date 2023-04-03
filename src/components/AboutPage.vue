@@ -49,8 +49,6 @@
                variant="outlined"
                prepend-icon="mdi-export-variant"><a href="./EnesBirisik_CV.pdf" target="_blank">Resume</a>
         </v-btn>
-
-
       </v-col>
     </v-row>
   </v-container>

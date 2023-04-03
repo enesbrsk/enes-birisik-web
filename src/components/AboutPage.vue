@@ -12,26 +12,17 @@
         <img :src="require('@/assets/images/7.png')" alt="Developer" class="about-image"/>
       </v-col>
 
-      <v-col align="left" cols="12" md="8" class="about-content">
+      <v-col cols="12" md="8" class="about-content">
 
         <div>
-          <v-row align="center" justify="start" style="column-gap: 20px;">
+          <v-row align="center" >
             <v-col>
               <div>
-                <h2 style="margin: 0;">Birth:</h2>
-                <h2 style="margin: 0;">City:</h2>
-                <h2 style="margin: 0;">University:</h2>
-                <h2 style="margin: 0;">Department:</h2>
-                <h2 style="margin: 0;">Degree:</h2>
-              </div>
-            </v-col>
-            <v-col>
-              <div>
-                <h2 style="margin: 0;">16 Dec 1998</h2>
-                <h2 style="margin: 0;">Istanbul/ Turkey</h2>
-                <h2 style="margin: 0;">Duzce University</h2>
-                <h2 style="margin: 0;">Computer Engineering</h2>
-                <h2 style="margin: 0;">Bachelor</h2>
+                <h2 >Birth: <v-label>16 Dec 1998</v-label></h2>
+                <h2 >City: <v-label>Istanbul/ Turkey</v-label></h2>
+                <h2 >University: <v-label>Duzce University</v-label></h2>
+                <h2 >Department: <v-label>Computer Engineering</v-label></h2>
+                <h2 >Degree: <v-label>Bachelor</v-label></h2>
               </div>
             </v-col>
           </v-row>
@@ -87,5 +78,6 @@ export default {};
   font-size: 18px;
   line-height: 1.5;
   color: #666;
+  margin-top: 30px;
 }
 </style>

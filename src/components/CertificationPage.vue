@@ -1,11 +1,11 @@
 <template>
   <v-container fluid>
-    <v-banner-text id="text" class="text-h2 mb-8 text-center">CERTIFICATION</v-banner-text>
+    <v-banner-text id="text" class="text-h2 mb-8 text-center">Certifications</v-banner-text>
     <v-row align="center" justify="center">
-      <v-carousel hide-delimiters class="mx-auto" style="max-width: 800px" :cycle="true" :autoplay="true" :interval="3000" :items-per-row="2" multi-items>
+      <v-carousel hide-delimiters class="mx-auto" style="max-width: 1200px" :cycle="true" :autoplay="true" :interval="3000" :items-per-row="2" multi-items>
         <v-carousel-item v-for="(certification, index) in certificationList" :key="index">
           <div class="carousel-image">
-            <v-img :src="certification.certificateImage" alt="slide image" contain class="rounded-lg" />
+            <v-img  id="img-certification" :src="certification.certificateImage" alt="slide image" contain class="rounded-lg" />
           </div>
         </v-carousel-item>
       </v-carousel>
@@ -54,8 +54,9 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .carousel-image {
+
   display: flex;
   justify-content: center;
   align-items: center;

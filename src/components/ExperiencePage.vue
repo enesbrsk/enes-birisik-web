@@ -2,7 +2,7 @@
 
   <v-banner-text id="text" style="font-size: 3rem;font-weight: normal;text-align: center;padding-bottom: 10px;"
                  align="center">
-    Experience
+    Experiences
   </v-banner-text>
   <div style="margin-left:50px;margin-right: 50px">
     <v-expansion-panels class="mb-6">

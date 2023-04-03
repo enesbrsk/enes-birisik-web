@@ -11,9 +11,7 @@
       <v-col cols="12" md="4">
         <img :src="require('@/assets/images/7.png')" alt="Developer" class="about-image"/>
       </v-col>
-
       <v-col cols="12" md="8" class="about-content">
-
         <div>
           <v-row align="center">
             <v-col>

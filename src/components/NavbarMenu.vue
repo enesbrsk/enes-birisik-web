@@ -41,7 +41,6 @@ export default {
       { title: 'Skills', link: '/skills' },
       { title: 'Certification', link: '/certification' },
       { title: 'Contact', link: '/contact' },
-
     ],
   }),
 }

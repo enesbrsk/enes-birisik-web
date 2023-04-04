@@ -19,10 +19,6 @@ export default {
   components: {
     NavbarMenu
   },
-
-  data: () => ({
-    //
-  }),
 }
 </script>
 <style>

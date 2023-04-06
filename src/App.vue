@@ -1,11 +1,11 @@
 <template>
   <v-app>
     <v-app-bar app color="white" dark>
-      <NavbarMenu/>
+      <NavbarMenu />
     </v-app-bar>
     <v-main>
-      <v-container style="margin-top: 20px; width: 75%;">
-        <router-view/>
+      <v-container class="custom-container">
+        <router-view />
       </v-container>
     </v-main>
   </v-app>
@@ -22,9 +22,21 @@ export default {
 }
 </script>
 <style>
-html, body {
+html,
+body {
   scroll-behavior: smooth;
   height: 100%;
   margin: 0;
 }
-</style>
+
+.custom-container {
+  margin-top: 20px !important;
+  width: 75% !important;
+}
+
+@media (max-width: 1024px) {
+  .custom-container {
+    margin-top: 20px !important;
+    width: 100% !important;
+  }
+}</style>

@@ -1,33 +1,48 @@
 <template>
-  <div class="custom-banner-text">
+  <div id="myText" class="custom-banner-text">
     Check out some of my projects
   </div>
-  <div style="display: flex; flex-wrap: wrap;">
-    <v-hover v-for="(p, index) in projectList" :key="index" v-slot="{ isHovering, props }">
-      <v-card class="custom-card" color="grey-lighten-4" v-bind="props" :aspect-ratio="16 / 9" cover>
+  <v-container fluid>
+    <v-row>
+      <v-col v-for="(p, index) in projectList" :key="index">
+        <v-hover v-slot="{ isHovering, props }">
+          <v-card class="custom-card" color="grey-lighten-4" v-bind="props" :aspect-ratio="16 / 9" cover>
 
 
-        <v-expand-transition>
-          <div v-if="isHovering" class="d-flex transition-fast-in-fast-out bg-orange-darken-2 v-card--reveal"
-            style="height: 100%;  background-color: rgba(0, 0, 0, 0.8) !important; color: rgb(255, 255, 255) !important;">
-            {{ p.projectExplain }}
-          </div>
-        </v-expand-transition>
-        <v-card-text class="text-h5"
-          style="font-family: Quicksand,sans-serif; font-size: 18pt !important; font-weight: bold; color:white; line-height: normal;  margin: auto;  text-align: center;">
-          {{ p.projectTitle }}
-          <div class="btn-div">
-              <v-img v-for="(i, indexx) in p.projectIcon" :key="indexx" :src="i.path" :width=i.width></v-img>
-            
-          </div>
-        </v-card-text>
-      </v-card>
-    </v-hover>
-  </div>
+            <v-expand-transition>
+              <div v-if="isHovering" class="d-flex transition-fast-in-fast-out bg-orange-darken-2 v-card--reveal"
+                style="height: 100%;  background-color: rgba(0, 0, 0, 0.8) !important; color: rgb(255, 255, 255) !important;">
+                {{ p.projectExplain }}
+              </div>
+            </v-expand-transition>
+            <v-card-text class="text-h5"
+              style="font-family: Quicksand,sans-serif; font-size: 18pt !important; font-weight: bold; color:white; line-height: normal;  margin: auto;  text-align: center;">
+              {{ p.projectTitle }}
+              <div class="btn-div">
+                <v-img v-for="(i, indexx) in p.projectIcon" :key="indexx" :src="i.path" :width=i.width></v-img>
+
+              </div>
+            </v-card-text>
+          </v-card>
+        </v-hover>
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 
 <script>
-
+function changeTextColor() {
+  var letters = '0123456789ABCDEF'; // RGB renk kodlarını oluşturmak için kullanılacak harfler
+  var color = '#'; // Renk kodunu başlatan karakter (#)
+  for (var i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)]; // Rasgele harf seçerek renk kodunu oluştur
+  }
+  const myTextElement = document.getElementById('myText');
+  if (myTextElement !== null) {
+    document.getElementById('myText').style.color = color; // Yazının rengini değiştir
+  }
+}
+setInterval(changeTextColor, 1000);
 export default {
   data() {
     return {
@@ -54,7 +69,7 @@ export default {
         {
           projectTitle: "Certificate of Completion",
           projectExplain: "This certifies that Enes Birisik has successfully completed the Data Science Fundamentals course.",
-         projectIcon: [
+          projectIcon: [
             {
               path: require('@/assets/images/Visual_Studio_Icon.png'),
               width: 35
@@ -152,7 +167,14 @@ export default {
 };
 </script>
 
-<style scoped> .v-card--reveal {
+<style scoped> #myText {
+   font-size: 30px;
+   transition: color 0.5s ease-in-out;
+   font-family: ui-monospace;
+   font-weight: bold;
+ }
+
+ .v-card--reveal {
    align-items: center;
    bottom: 0;
    justify-content: center;
@@ -165,10 +187,9 @@ export default {
    background-color: rgba(0, 0, 0, 0.8) !important;
    color: rgb(255, 255, 255) !important;
    margin: auto;
-    /* width: min-content; */
-    text-align: center;
-    justify-items: center;
-    z-index: 2;
+   text-align: center;
+   justify-items: center;
+   z-index: 2;
  }
 
 
@@ -176,11 +197,11 @@ export default {
    background-color: #f8fcff;
    display: flex;
    padding: 10px;
-   width: 100% !important;
+   width: max-content !important;
    height: 55px;
-   border-radius: 10px;
-   margin-top: 30px;
-   bottom: 10px;
+   border-radius: 7px !important;
+   margin: 30px auto !important;
+   min-width: 200px !important;
 
  }
 
@@ -210,7 +231,7 @@ export default {
    background-image: url('@/assets/images/background.png');
    background-size: cover;
    display: block !important;
-    width: 344px !important;
+   width: 344px !important;
 
  }
 
@@ -227,21 +248,30 @@ export default {
    display: grid !important;
    align-content: center !important;
  }
+
  .v-card .v-card-text[data-v-0e184748] {
-    margin: auto!important;
-    
-}
+   margin: auto !important;
+
+ }
+
+ .v-col {
+   flex-basis: 0;
+   flex-grow: 1;
+   max-width: 100%;
+   margin: inherit !important;
+ }
+
  .custom-card[data-v-0e184748] {
-margin: 20px !important;
-min-width: unset !important;
-min-height: unset !important;
-width: 300px!important;
+   margin: 20px !important;
+   min-width: unset !important;
+   min-height: unset !important;
+   width: 300px !important;
 
-height: 200px !important;
+   height: 200px !important;
 
-}
+ }
 
- @media (max-width: 1024px) {
+ @media (max-width: 1600px) {
    .custom-card[data-v-0e184748] {
 
      min-width: unset !important;
@@ -256,4 +286,21 @@ height: 200px !important;
      text-align: center;
      padding-bottom: 0px;
    }
- }</style>
+
+   .v-col[data-v-0e184748] {
+     flex-basis: 0;
+     flex-grow: 1;
+     max-width: 100%;
+     width: 100% !important;
+     margin: inherit !important;
+     display: contents !important;
+   }
+
+   .btn-div[data-v-0e184748] {
+     width: max-content !important;
+     justify-content: stretch !important;
+     margin: 30px auto !important;
+     min-width: 200px !important;
+   }
+ }
+</style>

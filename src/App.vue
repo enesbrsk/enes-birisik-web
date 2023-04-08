@@ -1,11 +1,11 @@
 <template>
   <v-app>
-    <v-app-bar app color="white" dark>
-      <NavbarMenu v-if="this.width > 1024" />
-      <NavigationDrawer v-if="this.width <= 1024" />
+    <v-app-bar v-if="this.width > 1024" app color="white" dark>
+      <NavbarMenu/>
+      
 
     </v-app-bar>
-
+    <NavigationDrawer v-if="this.width <= 1024" />
     <v-main>
       <v-container class="custom-container">
         <router-view />

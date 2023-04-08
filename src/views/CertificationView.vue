@@ -1,12 +1,12 @@
 <template>
   <div>
-    <CertificationPage/>
+    <CertificationOverview/>
   </div>
 </template>
 
 <script>
-import CertificationPage from "@/components/CertificationPage.vue";
+import CertificationOverview from "@/components/CertificationOverview.vue";
 export default {
-  components: { CertificationPage },
+  components: { CertificationOverview },
 };
 </script>

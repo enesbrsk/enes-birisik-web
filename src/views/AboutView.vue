@@ -1,12 +1,12 @@
 <template>
   <div>
-    <AboutPage/>
+    <AboutInfo/>
   </div>
 </template>
 
 <script>
-import AboutPage from "@/components/AboutPage.vue";
+import AboutInfo from "@/components/AboutInfo.vue";
 export default {
-  components: { AboutPage },
+  components: { AboutInfo },
 };
 </script>

@@ -1,12 +1,12 @@
 <template>
   <div>
-  <HeaderPage/>
+  <HeaderInfo/>
   </div>
 </template>
 
 <script>
-import HeaderPage from "../components/HeaderPage.vue";
+import HeaderInfo from "../components/HeaderInfo.vue";
 export default {
-  components: { HeaderPage },
+  components: { HeaderInfo },
 };
 </script>

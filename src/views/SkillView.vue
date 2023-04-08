@@ -1,17 +1,13 @@
 <template>
-    <SkillsPage/>
-    <ExperiencePage/>
+    <SkillsOverview/>
+    <ExperienceSummary/>
 </template>
 <script>
-import SkillsPage from "@/components/SkillsPage.vue";
-import ExperiencePage from "@/components/ExperiencePage.vue";
+import SkillsOverview from "@/components/SkillsOverview.vue";
+import ExperienceSummary from "@/components/ExperienceSummary.vue";
 
 export default {
-  components: {ExperiencePage, SkillsPage},
-  component:{
-    SkillsPage,
-    ExperiencePage
-  },
+  components: {ExperienceSummary, SkillsOverview},
   data(){
     return{
 

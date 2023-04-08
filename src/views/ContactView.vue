@@ -1,12 +1,12 @@
 <template>
   <div>
-    <ContactPage/>
+    <ContactInfo/>
   </div>
 </template>
 
 <script>
-import ContactPage from "@/components/ContactPage.vue";
+import ContactInfo from "@/components/ContactInfo.vue";
 export default {
-  components: { ContactPage },
+  components: { ContactInfo },
 };
 </script>

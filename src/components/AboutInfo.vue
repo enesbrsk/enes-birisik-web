@@ -5,7 +5,7 @@
   </v-banner-text>
 
   <div class="mockup-window border bg-base-600">
-    <div class="flex justify-center px-4 py-16 bg-top-gray-400">
+    <div class="flex justify-center px-4 py-16 bg-top-gray-400 no-padding">
       <v-container class="about-container">
 
         <v-row align="center">
@@ -98,9 +98,14 @@ export default {};
   background-color: purple !important;
   color: white !important;
 }
-@media(max-width: 1600px){
-  .about-container[data-v-7e99b488] {
-     padding: unset !important;
+@media(max-width: 1200px){
+  .about-container {
+     padding-left: 0px !important;
+     padding-right: 0px !important;
+  }
+  .no-padding {
+    padding: 0px !important;
+
   }
 }
 </style>

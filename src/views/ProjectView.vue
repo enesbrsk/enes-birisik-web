@@ -1,12 +1,12 @@
 <template>
-      <ProjectPage/>
+      <ProjectOverview/>
   </template>
   
   <script>
-  import ProjectPage from "@/components/ProjectPage.vue";
+  import ProjectOverview from "@/components/ProjectOverview.vue";
   export default {
     //   components: ["NavBar"],
-    components: { ProjectPage },
+    components: { ProjectOverview },
   };
   </script>
   

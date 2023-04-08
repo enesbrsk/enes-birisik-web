@@ -1,36 +1,26 @@
 <template>
     <v-navigation-drawer v-model="drawer" temporary location="right">
-        <v-list-item :prepend-avatar="require('@/assets/images/9.png')" title="Enes Birişik">
-
-            <template v-slot:prepend>
-                <v-list-item-icon>
-                    <v-icon>mdi-view-close</v-icon> <!-- carpı ikonunu burada ekledik -->
-                </v-list-item-icon>
-            </template>
-        </v-list-item>
+        <v-list-item :prepend-avatar="require('@/assets/images/9.png')" title="Enes Birişik"></v-list-item>
 
         <v-divider></v-divider>
 
         <v-list density="compact" nav>
             <v-list-item>
-                <Icon @click.stop="drawer = !drawer" :icon="icons.closeIcon" />
+              <!-- <Icon @click.stop="drawer = !drawer" :icon="icons.closeIcon" />-->
             </v-list-item>
             <v-list-item v-for="item in items" :key="item.title" :title="item.title" :value="item.title"
                 :to="item.link"></v-list-item>
         </v-list>
     </v-navigation-drawer>
     <div class="d-flex justify-center align-center h-100">
-        <Icon icon="material-symbols:clear-day" @click.stop="backgroundSet()" :color="colorDay ? 'black' : 'white'" />
+      <!--<Icon icon="material-symbols:clear-day" @click.stop="backgroundSet()" :color="colorDay ? 'black' : 'white'" />-->
         <v-app-bar-nav-icon variant="text" @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
     </div>
 </template>
   
 <script>
-import { Icon } from '@iconify/vue';
-import closeIcon from '@iconify-icons/mdi/close';
 export default {
     components: {
-        Icon,
     },
     data() {
         return {
@@ -42,9 +32,6 @@ export default {
                 { title: 'Certification', link: '/certification' },
                 { title: 'Contact', link: '/contact' },
             ],
-            icons: {
-                closeIcon,
-            },
             drawer: null,
             colorDay: null
         }
@@ -92,10 +79,5 @@ export default {
 .v-list .v-list-item--nav:not(:only-child) {
     margin: 4px auto !important;
     width: fit-content !important;
-}
-
-svg {
-    width: 2rem !important;
-    height: 2rem !important;
 }
 </style>

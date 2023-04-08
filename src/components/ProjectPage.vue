@@ -1,5 +1,5 @@
 <template>
-  <div id="myText" class="custom-banner-text">
+  <div class="custom-banner-text">
     Check out some of my projects
   </div>
   <v-container fluid>
@@ -31,18 +31,6 @@
 </template>
 
 <script>
-function changeTextColor() {
-  var letters = '0123456789ABCDEF'; // RGB renk kodlarını oluşturmak için kullanılacak harfler
-  var color = '#'; // Renk kodunu başlatan karakter (#)
-  for (var i = 0; i < 6; i++) {
-    color += letters[Math.floor(Math.random() * 16)]; // Rasgele harf seçerek renk kodunu oluştur
-  }
-  const myTextElement = document.getElementById('myText');
-  if (myTextElement !== null) {
-    document.getElementById('myText').style.color = color; // Yazının rengini değiştir
-  }
-}
-setInterval(changeTextColor, 1000);
 export default {
   data() {
     return {
@@ -280,6 +268,7 @@ export default {
 
    }
 
+
    .custom-banner-text {
      font-size: 1rem;
      font-weight: normal;
@@ -302,5 +291,6 @@ export default {
      margin: 30px auto !important;
      min-width: 200px !important;
    }
+
  }
 </style>

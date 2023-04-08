@@ -1,6 +1,5 @@
 <template>
-  <v-banner-text id="text" style="font-size: 3rem;font-weight: normal;text-align: center;padding-bottom: 10px;"
-                 align="center">
+  <v-banner-text id="text"  class="custom-banner-text">
     LEARN MORE ABOUT ME!
   </v-banner-text>
 
@@ -65,12 +64,6 @@ export default {};
 </script>
 
 <style scoped>
-.about-container {
-  text-align: left;
-  padding: 40px;
-  font-weight: 600;
-  font-family: Arial;
-}
 
 .about-image {
   width: 100%;
@@ -97,5 +90,10 @@ export default {};
 .custom-btn[data-v-7e99b488]:hover {
   background-color: purple !important;
   color: white !important;
+}
+@media(max-width: 1600px){
+  .about-container[data-v-7e99b488] {
+     padding: unset !important;
+  }
 }
 </style>

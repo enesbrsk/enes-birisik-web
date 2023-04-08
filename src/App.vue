@@ -1,11 +1,9 @@
 <template>
   <v-app>
-    <v-app-bar v-if="this.width > 1024" app color="white" dark>
+    <v-app-bar v-if="width > 1024" app color="white" dark>
       <NavbarMenu/>
-      
-
     </v-app-bar>
-    <NavigationDrawer v-if="this.width <= 1024" />
+    <NavigationDrawer v-if="width <= 1024" />
     <v-main>
       <v-container class="custom-container">
         <router-view />
@@ -15,6 +13,7 @@
 </template>
 
 <script>
+
 import NavbarMenu from './components/NavbarMenu.vue';
 import NavigationDrawer from './components/NavigationDrawer.vue';
 
@@ -26,21 +25,24 @@ export default {
     }
   },
   mounted() {
-    this.width = window.innerWidth;
-    window.addEventListener('resize', this.updateWindowDimensions);
+    this.handleResize();
+    window.addEventListener('resize', this.handleResize);
   },
   beforeUnmount() {
-    window.removeEventListener('resize', this.updateWindowDimensions);
+    window.removeEventListener('resize', this.handleResize);
   },
   components: {
     NavbarMenu,
     NavigationDrawer
   },
   methods: {
-   
-  },
+    handleResize() {
+      this.width = window.innerWidth;
+    }
+  }
 }
 </script>
+
 <style>
 html,
 body {

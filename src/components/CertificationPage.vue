@@ -1,6 +1,6 @@
 <template>
   <v-container fluid>
-    <v-banner-text id="text" class="text-h2 mb-8 text-center">Certifications</v-banner-text>
+    <v-banner-text id="text" class="custom-banner-text">Check out of my certifications</v-banner-text>
     <v-row align="center" justify="center">
       <v-carousel hide-delimiters class="mx-auto" style="max-width: 1200px" :cycle="true" :autoplay="true" :interval="3000" :items-per-row="2" multi-items>
         <v-carousel-item v-for="(certification, index) in certificationList" :key="index">
@@ -11,6 +11,7 @@
       </v-carousel>
     </v-row>
   </v-container>
+
 </template>
 
 <script>

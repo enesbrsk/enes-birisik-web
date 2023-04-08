@@ -1,5 +1,6 @@
 <template>
-  <v-banner-text id="text" class="text-h2 mb-8 text-center">Contact Me</v-banner-text>
+  <v-banner-text id="text" class="custom-banner-text">
+                 Contact Me</v-banner-text>
   <div class="mockup-window border bg-base-600">
     <div class="flex justify-between px-4 py-16 bg-top-gray-400">
       <v-row>

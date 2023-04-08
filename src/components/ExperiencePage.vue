@@ -1,7 +1,6 @@
 <template style="margin:20px">
 
-  <v-banner-text id="text" style="font-size: 3rem;font-weight: normal;text-align: center;padding-bottom: 10px;"
-                 align="center">
+  <v-banner-text id="text" class="custom-banner-text">
     Experiences
   </v-banner-text>
   <div style="margin-left:50px;margin-right: 50px">

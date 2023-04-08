@@ -14,8 +14,8 @@
 
 <script>
 
-import NavbarMenu from './components/NavbarMenu.vue';
-import NavigationDrawer from './components/NavigationDrawer.vue';
+import NavbarMenu from './components/menu/NavbarMenu.vue';
+import NavigationDrawer from './components/menu/NavigationDrawer.vue';
 
 export default {
   name: 'App',

@@ -1,6 +1,7 @@
 <template>
-  <v-banner-text id="text"  class="custom-banner-text">
-    LEARN MORE ABOUT ME!
+  <v-banner-text id="text" class="custom-banner-text"
+                 align="center">
+    Learn more about me!
   </v-banner-text>
 
   <div class="mockup-window border bg-base-600">
@@ -64,6 +65,12 @@ export default {};
 </script>
 
 <style scoped>
+.about-container {
+  text-align: left;
+  padding: 40px;
+  font-weight: 600;
+  font-family: Arial;
+}
 
 .about-image {
   width: 100%;

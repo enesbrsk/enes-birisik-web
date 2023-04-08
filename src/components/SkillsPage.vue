@@ -1,8 +1,7 @@
 <template>
   <div>
     <v-container class="skill-container">
-      <v-banner-text id="text" style="font-size: 3rem;font-weight: normal;text-align: center;padding-bottom: 10px;"
-                     align="center">
+      <v-banner-text id="text" class="custom-banner-text">
         Check Out My Skills
       </v-banner-text>
       <div class="splide">

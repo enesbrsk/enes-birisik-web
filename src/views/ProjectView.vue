@@ -1,7 +1,5 @@
 <template>
-    <div>
       <ProjectPage/>
-    </div>
   </template>
   
   <script>

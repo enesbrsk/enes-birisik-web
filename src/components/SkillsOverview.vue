@@ -143,5 +143,15 @@ export default {
   border-radius: 8px;
 
 }
-
+@media (max-width: 1200px) {
+  .skill-container{
+    padding: 0;
+    margin: 0;
+  }
+  .splide{
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0;
+  }
+}
 </style>

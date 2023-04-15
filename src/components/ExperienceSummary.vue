@@ -1,11 +1,11 @@
-<template style="margin:20px">
-
+<template>
   <v-banner-text id="text" class="custom-banner-text">
     Experiences
   </v-banner-text>
-  <div style="margin-left:50px;margin-right: 50px">
+  <div class="experience">
     <v-expansion-panels class="mb-6">
       <v-expansion-panel
+          class="custom-expansion-panel"
           v-for="(item,index) in experienceList"
           :key="index"
       >
@@ -15,7 +15,7 @@
               <v-img width="140" :src="item.image" aspect-ratio="1"></v-img>
             </v-col>
             <v-col cols="7">
-              <div id="text" class="text-h6 font-weight-bold" style="text-align: left;">{{ item.title }}</div>
+              <div  id="text" class="text-h6 font-weight-bold" style="text-align: left;">{{ item.title }}</div>
               <v-col>
                 <h2>{{ item.company }}</h2>
               </v-col>
@@ -76,18 +76,9 @@ export default {
 };
 </script>
 <style scoped>
-.v-expansion-panel__header__title {
-  color: #374151 !important;
-  font-family: Inter, sans-serif !important;
-  font-weight: bold;
-}
-
-.panel-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 16px;
-  background-color: #f3f4f6;
+.experience {
+  margin-left: 50px;
+  margin-right: 50px
 }
 
 .panel-header img {
@@ -97,27 +88,17 @@ export default {
   margin-right: 16px;
 }
 
-.panel-header-text {
-  display: flex;
-  flex-direction: column;
-}
+@media (max-width: 1200px) {
+  .experience {
+    padding: 0;
+    margin: 0;
+  }
 
-.panel-header-title {
-  font-size: 18px;
-  font-weight: bold;
-  color: #374151;
-  font-family: Inter, sans-serif;
-}
+  .panel-header img {
+    padding: 0;
+    margin: 0;
 
-.panel-header-subtitle {
-  font-size: 14px;
-  color: #6b7280;
-}
+  }
 
-.panel-header-date {
-  font-size: 14px;
-  color: #6b7280;
-  text-align: right;
 }
-
 </style>

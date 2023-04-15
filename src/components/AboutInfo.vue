@@ -99,6 +99,11 @@ export default {};
   color: white !important;
 }
 @media(max-width: 1200px){
+  .about-image{
+    width: 70%;
+    height: 70%;
+    margin: 0 auto;
+  }
   .about-container {
      padding-left: 0px !important;
      padding-right: 0px !important;

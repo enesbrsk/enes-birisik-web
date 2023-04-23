@@ -10,7 +10,7 @@
           :key="index"
       >
         <v-expansion-panel-title expand-icon="mdi-menu-down">
-          <v-row align="center">
+          <v-row v-if="width > 1024" align="center">
             <v-col cols="1">
               <v-img width="140" :src="item.image" aspect-ratio="1"></v-img>
             </v-col>
@@ -20,8 +20,19 @@
                 <h2>{{ item.company }}</h2>
               </v-col>
             </v-col>
-            <v-col cols="4" class="text-right">
-              <div class="text-h10">{{ item.date }}</div>
+            <v-col  cols="4" class="text-right">
+              <div  class="text-h10">{{ item.date }}</div>
+            </v-col>
+          </v-row>
+          <v-row v-if="width < 1024" align="center">
+            <v-col cols="4">
+              <v-img width="140" :src="item.image" aspect-ratio="1"></v-img>
+            </v-col>
+            <v-col cols="8">
+              <div  id="text" class="text-h6 font-weight-bold" style="text-align: left;font-size: 17px !important;">{{ item.title }}</div>
+              <v-col>
+                <h2 style="text-align: left;">{{ item.company }}</h2>
+              </v-col>
             </v-col>
           </v-row>
         </v-expansion-panel-title>
@@ -39,6 +50,7 @@
 export default {
   data() {
     return {
+      width:0,
       experienceList: [
         {
           title: 'Junior Back End Developer',
@@ -73,6 +85,19 @@ export default {
       ],
     };
   },
+
+  mounted() {
+    this.handleResize();
+    window.addEventListener('resize', this.handleResize);
+  },
+  beforeUnmount() {
+    window.removeEventListener('resize', this.handleResize);
+  },
+  methods: {
+    handleResize() {
+      this.width = window.innerWidth;
+    }
+  }
 };
 </script>
 <style scoped>

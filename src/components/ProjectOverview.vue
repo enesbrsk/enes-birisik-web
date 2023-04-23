@@ -30,9 +30,22 @@
 </template>
 
 <script>
+/*import projectService from "@/services/ProjectService";*/
+
 export default {
+
+  /*
+  mounted() {
+    projectService.getProjects().then(response => {
+      console.log(response)
+      this.projects = response.data;
+    })
+
+  },*/
+
   data() {
     return {
+      projects:[],
       projectList: [
         {
           projectTitle: "Personel Devam Kontrol Sistemi",

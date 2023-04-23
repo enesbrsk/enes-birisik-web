@@ -81,7 +81,6 @@ section {
 
 .btn {
 
-
   background: #8e54e9;
 
   border-radius: 6px;

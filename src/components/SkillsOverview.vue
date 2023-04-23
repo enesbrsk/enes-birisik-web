@@ -153,5 +153,11 @@ export default {
     padding-right: 0;
     margin: 0;
   }
+  #skill-card {
+    width: 100%;
+    max-width: 200px;
+    max-height: 205px;
+  }
+
 }
 </style>

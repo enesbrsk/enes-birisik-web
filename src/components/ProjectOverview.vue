@@ -1,34 +1,35 @@
 <template>
-  <v-container fluid>
     <v-banner-text id="text" class="custom-banner-text">Check out some of my projects
     </v-banner-text>
-    <v-row>
-      <v-col v-for="(p, index) in projectList" :key="index">
-        <v-hover v-slot="{ isHovering, props }">
-          <v-card class="custom-card" color="grey-lighten-4" v-bind="props" :aspect-ratio="16 / 9" cover>
 
-
-            <v-expand-transition>
-              <div v-if="isHovering" class="d-flex transition-fast-in-fast-out bg-orange-darken-2 v-card--reveal"
-                   style="height: 100%;  background-color: rgba(0, 0, 0, 0.8) !important; color: rgb(255, 255, 255) !important;">
-                {{ p.projectExplain }}
-              </div>
-            </v-expand-transition>
-            <v-card-text class="text-h5"
-                         style="font-family: Quicksand,sans-serif; font-size: 18pt !important; font-weight: bold; color:white; line-height: normal;  margin: auto;  text-align: center;">
-              {{ p.projectTitle }}
-              <div class="btn-div">
-                <v-img v-for="(i, indexx) in p.projectIcon" :key="indexx" :src="i.path" :width=i.width></v-img>
-
-              </div>
-            </v-card-text>
-          </v-card>
-        </v-hover>
-      </v-col>
-    </v-row>
-  </v-container>
+      <v-row >
+        <v-col v-for="(p, index) in projectList" :key="index">
+          <v-hover v-slot="{ isHovering, props }">
+            <v-card class="custom-card" v-bind="props">
+              <v-expand-transition>
+                <div v-if="isHovering" class="d-flex transition-fast-in-fast-out bg-orange-darken-2 v-card--reveal align-center"
+                     style="height: 100%; ">
+                  {{ p.projectExplain }}
+                </div>
+              </v-expand-transition>
+              <v-card-text class="text-h5" style="text-align: center; margin: auto;margin: 10px;height: 80px ">
+                <div style="font-family: Quicksand, sans-serif; font-size: 18pt; font-weight: bold; color: white; margin: auto;height: 40px ">
+                  {{ p.projectTitle }}
+                </div>
+                <div class="btn-div" style="margin: 10px">
+                  <v-img v-for="(i, indexx) in p.projectIcon" :key="indexx" :src="i.path" :width="i.width"></v-img>
+                </div>
+              </v-card-text>
+            </v-card>
+          </v-hover>
+        </v-col>
+      </v-row>
+      <v-row>
+        <v-col cols="12">
+          <h1 class="text-center">Projelerim</h1>
+        </v-col>
+      </v-row>
 </template>
-
 <script>
 /*import projectService from "@/services/ProjectService";*/
 
@@ -167,12 +168,8 @@ export default {
 };
 </script>
 
-<style scoped> #myText {
-  font-size: 30px;
-  transition: color 0.5s ease-in-out;
-  font-family: ui-monospace;
-  font-weight: bold;
-}
+<style scoped>
+
 
 .v-card--reveal {
   align-items: center;
@@ -197,7 +194,6 @@ export default {
   background-color: #f8fcff;
   display: flex;
   padding: 10px;
-  width: max-content !important;
   height: 55px;
   border-radius: 7px !important;
   margin: 30px auto !important;
@@ -206,7 +202,8 @@ export default {
 }
 
 .custom-card {
-  margin: 10px !important;
+  background-color: red;
+  margin: 10px;
   border-radius: 10px;
   box-shadow: 0px 0px 10px 0px;
   min-width: 320px;
@@ -228,7 +225,9 @@ export default {
   border-color: rgba(var(--v-border-color), var(--v-border-opacity));
   border-radius: 15px !important;
   box-shadow: 0px 0px 10px 0px !important;
-  background-image: url('@/assets/images/background.png');
+  background: rgb(16,9,138);
+  background: linear-gradient(180deg, rgba(16,9,138,0.7440317191329657) 46%, rgba(89,130,204,0.7496339600293243) 100%, rgba(78,64,207,0.3841911764705882) 100%) !important;
+
   background-size: cover;
   display: block !important;
   width: 344px !important;
@@ -247,11 +246,6 @@ export default {
   flex: inherit !important;
   display: grid !important;
   align-content: center !important;
-}
-
-.v-card .v-card-text[data-v-0e184748] {
-  margin: auto !important;
-
 }
 
 .v-col {
@@ -276,16 +270,6 @@ export default {
 
     min-width: unset !important;
     min-height: unset !important;
-    width: -webkit-fill-available !important;
-
-  }
-
-
-  .custom-banner-text {
-    font-size: 1rem;
-    font-weight: normal;
-    text-align: center;
-    padding-bottom: 0px;
   }
 
   .v-col[data-v-0e184748] {
@@ -303,6 +287,9 @@ export default {
     margin: 30px auto !important;
     min-width: 200px !important;
   }
-
+  .small-images {
+    width: 50px;
+    margin: 10px;
+  }
 }
 </style>
